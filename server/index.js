@@ -29,7 +29,7 @@ app.use(morgan('common'))
 app.use(cookieParser())
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000'
+    origin: process.env.FRONT_END_URL || 'http://localhost:3000'
 }))
 
 app.use('/auth', authRouter)

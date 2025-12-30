@@ -17,12 +17,12 @@ function Login() {
       email,
       password
     })
-    setItem(KEY_ACCESS_TOKEN, response.result.accessToken)
+    setItem(KEY_ACCESS_TOKEN, response.data.accessToken)
     navigate('/');
     // console.log(result);
    
     } catch (error) {
-      console.log(error)
+      console.log(error.response?.data || error.message)
     }
   }
 

@@ -30,7 +30,7 @@ app.use(cookieParser())
 app.use(cors({
     credentials: true,
     // origin: process.env.FRONT_END_URL || 'http://localhost:3000'
-    origin:'*'
+    origin:"https://social-media-beta-dusky.vercel.app"
 }))
 
 app.use('/auth', authRouter)
